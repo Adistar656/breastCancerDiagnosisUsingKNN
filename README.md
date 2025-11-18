@@ -26,9 +26,6 @@ The dataset includes measurements such as radius, texture, smoothness, compactne
 - Scikit-learn  
 - Matplotlib, Seaborn  
 
-## Results
-The optimized KNN model achieves high accuracy in distinguishing malignant and benign breast tumors, showing good potential for medical decision support.
-
 ## How to Run
 1. Clone the repository:
 ```bash
@@ -54,6 +51,8 @@ python breast_cancer_knn.py
 
 
 ## Results
+The optimized KNN model achieves high accuracy in distinguishing malignant and benign breast tumors, showing good potential for medical decision support.
+
 After tuning the KNN hyperparameters, the model achieved the following results on the test dataset:
 - Optimal number of neighbors (K): 7  
 - Accuracy: 97.2%  
