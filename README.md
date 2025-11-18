@@ -1,30 +1,21 @@
-# Breast Cancer Diagnosis Using K-Nearest Neighbors (KNN)
+# Breast Cancer Classification using K-Nearest Neighbors (KNN)
 
-This project implements the K-Nearest Neighbors (KNN) algorithm to classify breast cancer tumors as malignant or benign using the Wisconsin Breast Cancer dataset. It demonstrates how supervised machine learning techniques can assist in medical diagnosis through data preprocessing, model training, and performance evaluation.
+This project applies the K-Nearest Neighbors (KNN) machine learning algorithm to classify breast cancer tumors as malignant or benign based on features from the Breast Cancer Wisconsin (Diagnostic) dataset. It demonstrates a simple yet effective supervised learning pipeline for medical diagnosis classification tasks.
 
 ## Dataset
-The project uses the [Breast Cancer Wisconsin (Diagnostic) Dataset](https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic)) from the UCI Machine Learning Repository.  
-The dataset includes measurements such as radius, texture, smoothness, compactness, and other cell characteristics derived from fine needle aspirate images.
+The dataset used is the Breast Cancer Wisconsin (Diagnostic) dataset, which contains various features computed from digitized images of fine needle aspirate (FNA) of breast masses. Each record is labeled as malignant (M) or benign (B).
 
-## Project Workflow
-1. Load and explore the dataset using pandas.
-2. Preprocess data (handle missing values, normalize features).
-3. Split data into training and test sets.
-4. Train the KNN classifier using scikit-learn.
-5. Optimize the number of neighbors (K) using grid search or manual tuning.
-6. Evaluate model performance using accuracy, precision, recall, F1-score, and confusion matrix.
-
-## Key Features
-- Clean, reproducible machine learning pipeline.  
-- Visualization of data distribution and model evaluation metrics.  
-- Hyperparameter tuning for optimal K value.  
-- Easy-to-understand implementation for beginners.
-
-## Technologies Used
-- Python  
-- NumPy, Pandas  
-- Scikit-learn  
-- Matplotlib, Seaborn  
+## Project Structure and Workflow
+- Import essential libraries: numpy, pandas, matplotlib, seaborn, scikit-learn.
+- Load and explore the dataset from a CSV file, inspecting structure and summary.
+- Preprocess data:
+  - Handle missing values (if any).
+  - Encode the diagnosis labels (M/B) into numeric format.
+  - Normalize feature columns.
+- Split the dataset into training and testing sets.
+- Train the KNN classifier, tuning the number of neighbors (`n_neighbors`).
+- Evaluate model performance using metrics like accuracy, confusion matrix, precision, recall.
+- Visualize results using plots such as confusion matrix and accuracy scores.
 
 ## How to Run
 1. Clone the repository:
@@ -32,30 +23,37 @@ The dataset includes measurements such as radius, texture, smoothness, compactne
 git clone https://github.com/yourusername/breastCancerDiagnosisUsingKNN.git
 ```
 
-2. Navigate to the project directory:
+2. Navigate to the project folder:
 ```bash
 cd breastCancerDiagnosisUsingKNN
 ```
 
-3. Install dependencies:
+3. Install required dependencies (preferably in a virtual environment):
 ```bash
 pip install -r requirements.txt
 ```
 
-4. Run the Jupyter Notebook or script:
+
+4. Run the Jupyter notebook to reproduce the analysis:
 ```bash
-jupyter notebook breast_cancer_knn.ipynb
-or 
-python breast_cancer_knn.py
+jupyter notebook main.ipynb
+```
+Or 
+convert the notebook to a Python script and run:
+```bash
+python main.py
 ```
 
 
-## Results
-The optimized KNN model achieves high accuracy in distinguishing malignant and benign breast tumors, showing good potential for medical decision support.
+## Key Libraries and Tools
+- Python 3.x  
+- NumPy and Pandas for data manipulation  
+- Matplotlib and Seaborn for visualization  
+- Scikit-learn for machine learning and model evaluation  
 
-After tuning the KNN hyperparameters, the model achieved the following results on the test dataset:
-- Optimal number of neighbors (K): 7  
-- Accuracy: 97.2%  
-- Precision: 96.8%  
-- Recall: 97.5%  
-- F1-score: 97.1% 
+## Results
+The tuned KNN model achieved high classification performance on the test data with:
+- Number of neighbors: 13 (tuned)
+- Accuracy: Approximately 97%
+- Additional evaluation metrics and confusion matrix plots confirm effective tumor classification.
+
